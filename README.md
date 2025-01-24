@@ -63,6 +63,7 @@ Launch the graphical interface:
 - Rust: Cargo.toml
 ---
 # Project Structure
+```BASH
 polydepend/
 │
 ├── src/
@@ -76,7 +77,7 @@ polydepend/
 ├── requirements.txt      # Python dependencies for development
 ├── README.md             # Project documentation
 └── setup.py              # Packaging and distribution
-
+```
 ---
 
 # Development
