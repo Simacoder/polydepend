@@ -1,2 +1,3 @@
 [console_scripts]
-polydepend = cli:main
+polydepend-cli = cli:main
+polydepend-gui = gui:main
