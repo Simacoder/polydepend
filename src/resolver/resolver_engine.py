@@ -91,9 +91,12 @@ class DependencyResolver:
                     req_name = req.project_name
                     if req_name in dependencies:
                         # Check if the required version matches
-                        if not pkg_resources.Requirement.parse(f"{req_name}{req.specifier}").specifier.contains(dependencies[req_name]):
+                        required_version = req.specifier
+                        resolved_version = dependencies[req_name]
+                        
+                        if not pkg_resources.Requirement.parse(f"{req_name}{required_version}").specifier.contains(resolved_version):
                             compatibility_warnings.append(
-                                f"Potential conflict: {pkg_name} requires {req}"
+                                f"Potential conflict: {pkg_name} requires {req_name} {required_version}, but resolved version is {resolved_version}"
                             )
             except pkg_resources.DistributionNotFound:
                 # Package not installed, can't perform deep compatibility check

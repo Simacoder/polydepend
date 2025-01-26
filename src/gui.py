@@ -3,7 +3,7 @@ from tkinter import filedialog, messagebox, ttk
 import os
 import json
 
-from analyzers.python_analyzer import PythonDependencyAnalyzer
+from analyzer.python_analyzer import PythonDependencyAnalyzer
 from resolver.resolver_engine import DependencyResolver
 from fetcher.fetcher import DependencyFetcher
 

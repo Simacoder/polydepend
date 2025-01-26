@@ -3,7 +3,7 @@ import sys
 import venv
 import os
 import json
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Any  # Import Any here
 
 class DependencyFetcher:
     """Advanced dependency installation and management."""
